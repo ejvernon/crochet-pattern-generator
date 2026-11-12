@@ -9,7 +9,7 @@ set_site_information(
     description="Allows user's to input crochet pattern details and recieve a generated crochet pattern",
     sources="Thanks to Cisc 106 Blockpy, Drafter and ChatGPT",
     planning=["plan.pdf", "design.pdf"],
-    links=["https://github.com/ejvernon/crochet-pattern-generator"]
+    links=["https://github.com/ejvernon/crochet-pattern-generator/tree/main"]
     )
 hide_debug_information()
 set_website_framed(False)
