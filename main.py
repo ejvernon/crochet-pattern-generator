@@ -3,6 +3,7 @@ from bakery import assert_equal
 from drafter import *
 
 set_website_title("Crochet Pattern Generator")
+set_website_style("yorha")
 set_site_information(
     author="Emma Vernon",
     description="Allows user's to input crochet pattern details and recieve a generated crochet pattern",
@@ -12,7 +13,6 @@ set_site_information(
     )
 hide_debug_information()
 set_website_framed(False)
-set_website_style("yorha")
 @dataclass
 class CrochetInstructions:
     row: int
