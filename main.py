@@ -1,7 +1,18 @@
 from dataclasses import dataclass
 from bakery import assert_equal
 from drafter import *
-    
+
+set_website_title("Crochet Pattern Generator")
+set_site_information(
+    author="Emma Vernon",
+    description="Allows user's to input crochet pattern details and recieve a generated crochet pattern",
+    sources="Thanks to Cisc 106 Blockpy, Drafter and ChatGPT",
+    planning=["plan.pdf", "design.pdf"],
+    links=["https://github.com/ejvernon/https://github.com/ejvernon/crochet-pattern-generator"]
+    )
+hide_debug_information()
+set_website_framed(False)
+
 @dataclass
 class CrochetInstructions:
     row: int
