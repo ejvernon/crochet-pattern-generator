@@ -12,7 +12,7 @@ set_site_information(
     )
 hide_debug_information()
 set_website_framed(False)
-
+set_website_style("yorha")
 @dataclass
 class CrochetInstructions:
     row: int
