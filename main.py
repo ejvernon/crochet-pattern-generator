@@ -8,7 +8,7 @@ set_site_information(
     author="Emma Vernon",
     description="Allows user's to input crochet pattern details and recieve a generated crochet pattern",
     sources="Thanks to Cisc 106 Blockpy, Drafter and ChatGPT",
-    planning=["plan.pdf", "design.pdf","LLM_Conversation.pdf"],
+    planning=["plan.pdf", "design.pdf","LLM_Conversation1.pdf"],
     links=["https://github.com/ejvernon/crochet-Pattern-generator/tree/main"]
     )
 hide_debug_information()
