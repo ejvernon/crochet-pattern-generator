@@ -102,7 +102,7 @@ def index(state:State)->Page:
         Button("Add a Row","stitch_instructions"),
         Button("Update a Row","update_instructions"),
         Button("Delete a Row","delete_instructions"),
-        Button("Insert Pattern Info","Pattern_info"),
+        Button("Insert Pattern Info","pattern_info"),
         Button("Insert Additional Instructions","additional_instructions"),
         Button("View Generated Instructions","final_crochet_instructions")
         ])
@@ -115,7 +115,7 @@ assert_equal(index(initial_test_state),
                    Button("Add a Row", "stitch_instructions"),
                    Button("Update a Row", "update_instructions"),
                    Button("Delete a Row", "delete_instructions"),
-                   Button("Insert Pattern Info", "Pattern_info"),
+                   Button("Insert Pattern Info", "pattern_info"),
                    Button("Insert Additional Instructions", "additional_instructions"),
                    Button("View Generated Instructions", "final_crochet_instructions")]))
 
@@ -133,7 +133,7 @@ assert_equal(index(State([CrochetInstructions(1,"1 sc, 1 inc, repeat around")],
                    Button("Add a Row", "stitch_instructions"),
                    Button("Update a Row", "update_instructions"),
                    Button("Delete a Row", "delete_instructions"),
-                   Button("Insert Pattern Info", "Pattern_info"),
+                   Button("Insert Pattern Info", "pattern_info"),
                    Button("Insert Additional Instructions", "additional_instructions"),
                    Button("View Generated Instructions", "final_crochet_instructions")]))
 
@@ -172,7 +172,7 @@ Page(State([CrochetInstructions(1,"1 sc 1 inc")],
                    Button("Add a Row", "stitch_instructions"),
                    Button("Update a Row", "update_instructions"),
                    Button("Delete a Row", "delete_instructions"),
-                   Button("Insert Pattern Info", "Pattern_info"),
+                   Button("Insert Pattern Info", "pattern_info"),
                    Button("Insert Additional Instructions", "additional_instructions"),
                    Button("View Generated Instructions", "final_crochet_instructions")]))
 
@@ -249,7 +249,7 @@ assert_equal(save_additional_instructions(State([],
                    Button("Add a Row", "stitch_instructions"),
                    Button("Update a Row", "update_instructions"),
                    Button("Delete a Row", "delete_instructions"),
-                   Button("Insert Pattern Info", "Pattern_info"),
+                   Button("Insert Pattern Info", "pattern_info"),
                    Button("Insert Additional Instructions", "additional_instructions"),
                    Button("View Generated Instructions", "final_crochet_instructions")]))
 
@@ -268,7 +268,7 @@ assert_equal(save_additional_instructions(State([],
                    Button("Add a Row", "stitch_instructions"),
                    Button("Update a Row", "update_instructions"),
                    Button("Delete a Row", "delete_instructions"),
-                   Button("Insert Pattern Info", "Pattern_info"),
+                   Button("Insert Pattern Info", "pattern_info"),
                    Button("Insert Additional Instructions", "additional_instructions"),
                    Button("View Generated Instructions", "final_crochet_instructions")]))
 
@@ -336,7 +336,7 @@ def save_pattern_info(state:State, hook_size:int, yarn_brand:str, yarn_type:str)
     state.pattern_details = pattern
     return index(state)
 
-#update save_Pattern_info
+#update save_pattern_info
 assert_equal(save_pattern_info(State([],
                                      0,
                                      SpecialInstructions(SafetyEyes(0,0,False),False),
@@ -351,7 +351,7 @@ assert_equal(save_pattern_info(State([],
                    Button("Add a Row", "stitch_instructions"),
                    Button("Update a Row", "update_instructions"),
                    Button("Delete a Row", "delete_instructions"),
-                   Button("Insert Pattern Info", "Pattern_info"),
+                   Button("Insert Pattern Info", "pattern_info"),
                    Button("Insert Additional Instructions", "additional_instructions"),
                    Button("View Generated Instructions", "final_crochet_instructions")]))
     
@@ -387,7 +387,7 @@ assert_equal(pattern_info(initial_test_state),
         TextBox("yarn_brand"),
         "Yarn Name",
         TextBox("yarn_type"),
-        Button("Save","save_Pattern_info"),
+        Button("Save","save_pattern_info"),
         Button("Back","index")]))
 
 
@@ -631,7 +631,7 @@ assert_equal(save_update(State([CrochetInstructions(1,"1 sc")],
                    Button("Add a Row", "stitch_instructions"),
                    Button("Update a Row", "update_instructions"),
                    Button("Delete a Row", "delete_instructions"),
-                   Button("Insert Pattern Info", "Pattern_info"),
+                   Button("Insert Pattern Info", "pattern_info"),
                    Button("Insert Additional Instructions", "additional_instructions"),
                    Button("View Generated Instructions", "final_crochet_instructions")]))
 
@@ -650,7 +650,7 @@ assert_equal(save_update(State([CrochetInstructions(1,"1 sc"),
                    Button("Add a Row", "stitch_instructions"),
                    Button("Update a Row", "update_instructions"),
                    Button("Delete a Row", "delete_instructions"),
-                   Button("Insert Pattern Info", "Pattern_info"),
+                   Button("Insert Pattern Info", "pattern_info"),
                    Button("Insert Additional Instructions", "additional_instructions"),
                    Button("View Generated Instructions", "final_crochet_instructions")]))
 
@@ -724,7 +724,7 @@ assert_equal(delete_row(State([CrochetInstructions(1,"1 sc"),
                    Button("Add a Row", "stitch_instructions"),
                    Button("Update a Row", "update_instructions"),
                    Button("Delete a Row", "delete_instructions"),
-                   Button("Insert Pattern Info", "Pattern_info"),
+                   Button("Insert Pattern Info", "pattern_info"),
                    Button("Insert Additional Instructions", "additional_instructions"),
                    Button("View Generated Instructions", "final_crochet_instructions")]))
 
@@ -742,7 +742,7 @@ assert_equal(delete_row(State([CrochetInstructions(1,"1 sc")],
                    Button("Add a Row", "stitch_instructions"),
                    Button("Update a Row", "update_instructions"),
                    Button("Delete a Row", "delete_instructions"),
-                   Button("Insert Pattern Info", "Pattern_info"),
+                   Button("Insert Pattern Info", "pattern_info"),
                    Button("Insert Additional Instructions", "additional_instructions"),
                    Button("View Generated Instructions", "final_crochet_instructions")]))
 
