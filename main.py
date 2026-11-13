@@ -190,7 +190,7 @@ def stitch_instructions(state:State)->Page:
     return Page(state,[
         Header("Input Row/Stitch Details"),
         "What Row Are You Working On?",
-        TextBox("row"),
+        TextBox("row","0"),
         "Write This Row's Instructions",
         TextBox("instructions"),
         Button("Save","save_stitch_instructions"),
@@ -202,7 +202,7 @@ assert_equal(stitch_instructions(initial_test_state),
     Page(initial_test_state,[
         Header("Input Row/Stitch Details"),
         "What Row Are You Working On?",
-        TextBox("row"),
+        TextBox("row","0"),
         "Write This Row's Instructions",
         TextBox("instructions"),
         Button("Save", "save_stitch_instructions"),
@@ -287,9 +287,9 @@ def additional_instructions(state:State)->Page:
         "Did You Use Safety Eyes?",
         CheckBox("safety_eyes"),
         "Safety Eye Size in mm (Leave blank if not used)",
-        TextBox("safety_eye_size"),
+        TextBox("safety_eye_size","0"),
         "What Row Did You Add Your Eyes?",
-        TextBox("safety_eye_insert"),
+        TextBox("safety_eye_insert","0"),
         "Did You Stuff Your Project?",
         CheckBox("stuffing"),
         Button("Save","save_additional_instructions"),
@@ -309,9 +309,9 @@ assert_equal(additional_instructions(State([],
         "Did You Use Safety Eyes?",
         CheckBox("safety_eyes"),
         "Safety Eye Size in mm (Leave blank if not used)",
-        TextBox("safety_eye_size"),
+        TextBox("safety_eye_size","0"),
         "What Row Did You Add Your Eyes?",
-        TextBox("safety_eye_insert"),
+        TextBox("safety_eye_insert","0"),
         "Did You Stuff Your Project?",
         CheckBox("stuffing"),
         Button("Save","save_additional_instructions"),
@@ -368,7 +368,7 @@ def pattern_info(state:State)->Page:
     return Page(state,[
         Header("Input Pattern Details"),
         "Hook Size (mm)",
-        TextBox("hook_size"),
+        TextBox("hook_size","0"),
         "Yarn Brand",
         TextBox("yarn_brand"),
         "Yarn Name",
@@ -382,7 +382,7 @@ assert_equal(pattern_info(initial_test_state),
     Page(initial_test_state,
         [Header("Input Pattern Details"),
         "Hook Size (mm)",
-        TextBox("hook_size"),
+        TextBox("hook_size","0"),
         "Yarn Brand",
         TextBox("yarn_brand"),
         "Yarn Name",
@@ -446,7 +446,7 @@ def final_pattern_details(state:State)->str:
         str: The PatternDetails converted into a string
     """
     final = ""
-    if state.pattern_details.hook_size != 0:
+    if state.pattern_details.hook_size != "0":
         final = "Hook size: " + str(state.pattern_details.hook_size) + " mm"
     if state.pattern_details.yarn_type != "" or state.pattern_details.yarn_brand != "":
         final = final + " " + "\n" + " Yarn Used: " + state.pattern_details.yarn_brand + " " + state.pattern_details.yarn_type      
