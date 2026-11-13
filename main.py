@@ -368,7 +368,7 @@ def pattern_info(state:State)->Page:
     return Page(state,[
         Header("Input Pattern Details"),
         "Hook Size (mm)",
-        TextBox("hook_size","0"),
+        TextBox("hook_size"),
         "Yarn Brand",
         TextBox("yarn_brand"),
         "Yarn Name",
@@ -382,7 +382,7 @@ assert_equal(pattern_info(initial_test_state),
     Page(initial_test_state,
         [Header("Input Pattern Details"),
         "Hook Size (mm)",
-        TextBox("hook_size","0"),
+        TextBox("hook_size"),
         "Yarn Brand",
         TextBox("yarn_brand"),
         "Yarn Name",
@@ -446,7 +446,7 @@ def final_pattern_details(state:State)->str:
         str: The PatternDetails converted into a string
     """
     final = ""
-    if state.pattern_details.hook_size != "0":
+    if state.pattern_details.hook_size != 0:
         final = "Hook size: " + str(state.pattern_details.hook_size) + " mm"
     if state.pattern_details.yarn_type != "" or state.pattern_details.yarn_brand != "":
         final = final + " " + "\n" + " Yarn Used: " + state.pattern_details.yarn_brand + " " + state.pattern_details.yarn_type      
